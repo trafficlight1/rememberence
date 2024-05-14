@@ -46,7 +46,7 @@ export const SearchScreen = ({route}: RenderItemProps): JSX.Element => {
       <View style={styles.deadPeopleContainer}>
         <FastImage
           source={{
-            uri: route.params.image,
+            uri: route.params?.image,
           }}
           style={styles.deadPeopleImage}
         />
@@ -66,13 +66,13 @@ export const SearchScreen = ({route}: RenderItemProps): JSX.Element => {
           showsUserLocation={true}
           showsCompass={true}
           initialRegion={{
-            latitude: route.params.Y,
-            longitude: route.params.X,
+            latitude: route.params?.Y,
+            longitude: route.params?.X,
             latitudeDelta: 0.003,
             longitudeDelta: 0.003,
           }}>
           <Marker
-            coordinate={{latitude: route.params.Y, longitude: route.params.X}}
+            coordinate={{latitude: route.params?.Y, longitude: route.params?.X}}
           />
         </MapView>
       </View>
